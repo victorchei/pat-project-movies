@@ -1,15 +1,15 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import Menu from '@mui/material/Menu'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import IconButton from '@mui/material/IconButton'
 
-const CardMenu = ({ onCardSelect, children }) => {
+const CardMenu = ({ children }) => {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
   }
+
   const handleClose = () => {
     setAnchorEl(null)
   }
@@ -19,6 +19,7 @@ const CardMenu = ({ onCardSelect, children }) => {
       <IconButton
         sx={{
           position: 'absolute',
+          zIndex: 2,
           right: 5,
           top: 5,
           background: 'rgba(255, 255, 255, .3)',
@@ -41,6 +42,7 @@ const CardMenu = ({ onCardSelect, children }) => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        onClick={handleClose}
         PaperProps={{
           style: {
             width: '20ch',
