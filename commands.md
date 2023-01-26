@@ -8,7 +8,12 @@
 
 `yarn add` - install the package
 
-`yarn create react-app project-name` - create new react project
+`yarn create react-app frontend-ts --template typescript` - create new react project
+
+# storybook
+
+`npx storybook init` - create storybook
+
 
 
 
