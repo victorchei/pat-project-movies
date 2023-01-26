@@ -12,7 +12,9 @@
 
 # storybook
 
-`npx storybook init` - create storybook
+`yarn add @storybook/react` - add storybook
+
+`yarn storybook init`  - init storybook
 
 
 
