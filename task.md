@@ -7,7 +7,7 @@
 
 * switch to node 16.15.0
 
-* with yarn create new project react with name `frontend-ts` it will be automatically crated the folder with this name
+* with yarn create new project react with name `frontend-ts`. It shall be with typescript. it will be automatically crated the folder with this name
 
 # 1.2
 
