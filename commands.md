@@ -16,6 +16,10 @@
 
 `yarn storybook init`  - init storybook
 
+# eslint
+
+`yarn add eslint` - add eslint
+
 
 
 
