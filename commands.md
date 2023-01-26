@@ -5,4 +5,7 @@
 # yarn 
 `yarn install` - install packages in the folder with packages.json
 `yarn add` - install the package
+`yarn create react-app project-name` - create new react project
+
+
 
