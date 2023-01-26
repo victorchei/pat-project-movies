@@ -4,7 +4,9 @@
 
 * create new branch featrure/ts-project from ts-project
 
-* with create-react-app create new project frontend-ts
+* switch to node 16.15.0
+
+* with yarn new project react frontend-ts
 
 * add storybook to the project
 
