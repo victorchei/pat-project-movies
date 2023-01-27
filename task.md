@@ -19,3 +19,9 @@
 
 * create PR  from `feature/ts-project` to `ts-project`
 
+# 2) Create first component
+* create new branch `feature/movie-card` from `ts-project`
+
+* create folder `components` in `src` folder
+
+* create folder `MovieCard`, in this folder create component with types, REUSE FROM FRONTEND, WITH NEW STYLES=)
