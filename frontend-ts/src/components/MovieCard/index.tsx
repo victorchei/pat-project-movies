@@ -18,7 +18,7 @@ type MovieType = {
 }
 
 export type MovieCardProps = {
-  /** what is the maxwidth in number.
+  /** what  the max-width is in number.
    * @default 250
    */
   maxWidth: number
@@ -28,6 +28,8 @@ export type MovieCardProps = {
   position?: 'absolute' | 'relative'
   movie: MovieType
   onCardSelect: (movie: MovieType) => void
+  /** possibility to choose a background color */
+  backgroundColor?: string
 }
 
 const CardInfo = styled(CardContent)(({ theme }: { theme?: Theme }) => ({
@@ -50,21 +52,21 @@ const PlusIcon = styled(Box)(() => ({
   background: 'rgb(255, 175, 255)',
   cursor: 'pointer',
   '&:hover': {
-    opacity: 0,
+    backgroundColor: 'rgb(191, 64, 191)',
   },
 }))
 
 export const MovieCard = (props: MovieCardProps) => {
-  const { maxWidth = 250, position = 'relative', movie, onCardSelect } = props
+  const { maxWidth = 250, position = 'relative', movie, onCardSelect, backgroundColor } = props
   return (
     <>
-      <Card sx={{ maxWidth, position }}>
+      <Card sx={{ maxWidth, position, backgroundColor }}>
         {/* <CardMenu>
         <MenuItem onClick={() => onCardSelect(movie)}>Select</MenuItem>
        </CardMenu> */}
 
         <Box sx={{ position: 'relative' }}>
-          <CardMedia component="img" height="250" image={movie.image} alt={movie.title} />
+          <CardMedia component="img" height="250" image={movie.image} alt={movie.title} style={{ backgroundColor }} />
           <PlusIcon onClick={() => onCardSelect(movie)}>
             <AddBoxOutlinedIcon sx={{ fontSize: 80 }} />
           </PlusIcon>

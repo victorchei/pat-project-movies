@@ -26,3 +26,14 @@ export const Card = Template.bind({})
 Card.args = {
   ...defaultProps,
 }
+
+export const Card2 = Template.bind({})
+Card2.args = {
+  ...defaultProps,
+  maxWidth: 500,
+  movie: {
+    title: 'card2',
+    image: 'img2',
+    releaseDate: '15.05.2023',
+  },
+}
