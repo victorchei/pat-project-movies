@@ -1,0 +1,36 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+
+image: node:16.15.0
+
+definitions:
+  steps:
+    - step: &dependencies
+        name: Dependencies
+        script:
+          - yarn install
+        artifacts:
+          - .yarn/**  
+    - step: &build-react
+        name: React Build
+        script:
+          - cd react-project
+          - yarn build   
+
+options:
+  max-time: 10
+
+pipelines:
+  pull-requests:
+    '**':
+      - step: *dependencies      
+      - step: *build-react
+
+  branches:
+    develop:
+      - step: *dependencies      
+      - step: *build-react
+    
