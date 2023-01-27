@@ -16,10 +16,18 @@
 
 `yarn storybook init`  - init storybook
 
+`yarn install` - every time when we add new packages
+
+`yarn storybook` - open storybook
+
 # eslint
 
 `yarn add eslint` - add eslint
 
+
+# mui
+`yarn add @mui/material @mui/styled-engine-sc styled-components` - add mui components
+`yarn add @mui/icons-material` - add mui icons
 
 
 
