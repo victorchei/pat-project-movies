@@ -5,11 +5,10 @@ import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-// import MenuItem from '@mui/material/MenuItem'
+import MenuItem from '@mui/material/MenuItem'
 import { styled } from '@mui/material/styles'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
-
-// import CardMenu from '../CardMenu'
+import CardMenu from '../CardMenu'
 
 type MovieType = {
   title?: string
@@ -61,9 +60,9 @@ export const MovieCard = (props: MovieCardProps) => {
   return (
     <>
       <Card sx={{ maxWidth, position, backgroundColor }}>
-        {/* <CardMenu>
-        <MenuItem onClick={() => onCardSelect(movie)}>Select</MenuItem>
-       </CardMenu> */}
+        <CardMenu>
+          <MenuItem onClick={() => onCardSelect(movie)}>Select</MenuItem>
+        </CardMenu>
 
         <Box sx={{ position: 'relative' }}>
           <CardMedia component="img" height="250" image={movie.image} alt={movie.title} style={{ backgroundColor }} />
