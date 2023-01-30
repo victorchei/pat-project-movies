@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography'
 import MenuItem from '@mui/material/MenuItem'
 import { styled } from '@mui/material/styles'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
-
 import CardMenu from '../CardMenu'
 
 type MovieType = {
