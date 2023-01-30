@@ -4,7 +4,9 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
-// import MenuItem from '@mui/material/MenuItem'
+import MenuItem from '@mui/material/MenuItem'
+import CardMenu from '../CardMenu'
+
 type Genres = {
   name: string
 }
@@ -28,7 +30,7 @@ export type MovieCardSelectedProps = {
 }
 
 export const MovieCardSelected = (props: MovieCardSelectedProps) => {
-  const { movie, display = 'flex', minHeight = 164 } = props
+  const { movie, display = 'flex', minHeight = 164, onCardDelete } = props
   return (
     <Card sx={{ display, minHeight }}>
       <CardMedia component="img" sx={{ width: 100 }} image={movie.image} alt={movie.title} />
@@ -58,9 +60,9 @@ export const MovieCardSelected = (props: MovieCardSelectedProps) => {
             Length: {movie.runtime}
           </Typography>
         </Box>
-        {/* <CardMenu>
+        <CardMenu>
           <MenuItem onClick={() => onCardDelete(movie)}>Delete</MenuItem>
-        </CardMenu> */}
+        </CardMenu>
       </Box>
     </Card>
   )
