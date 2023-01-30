@@ -8,17 +8,12 @@ image: node:16.15.0
 
 definitions:
   steps:
-    - step: &dependencies
+    - step: &build-react
         name: Dependencies
         script:
+          - cd frontend-ts
           - yarn install
-        artifacts:
-          - .yarn/**  
-    - step: &build-react
-        name: React Build
-        script:
-          - cd react-project
-          - yarn build   
+          - yarn build        
 
 options:
   max-time: 10
@@ -26,11 +21,9 @@ options:
 pipelines:
   pull-requests:
     '**':
-      - step: *dependencies      
       - step: *build-react
 
   branches:
-    develop:
-      - step: *dependencies      
+    develop:    
       - step: *build-react
     
