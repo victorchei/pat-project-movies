@@ -26,7 +26,7 @@
 
 * create folder `MovieCard`, in this folder create component with types, REUSE FROM FRONTEND, WITH NEW STYLES=)
 
-# 2) Create all components with separate folders (without stories)
+# 3) Create all components with separate folders (without stories)
 *  watch 3 - 4 video about TS
 
 *  create new branch and separate PR for each component
@@ -40,3 +40,10 @@
 3PR) Navigation ( need also install "react-router-dom": "6", with `yarn add react-router-dom` ) 1h
 
 watch video `https://www.youtube.com/watch?v=ND-XaEQ4VSk&list=PLx9b8ngesbGE6j0sfH2XSbKh2Cx94DSlU`
+
+
+# 4) Create a stories
+*  create other components > 1PR for each component
+
+*  create 1 story for each component > can be 1 PR for all
+
