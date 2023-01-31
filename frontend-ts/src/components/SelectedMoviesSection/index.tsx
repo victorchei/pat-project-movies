@@ -1,18 +1,18 @@
 import React, { styled } from '@mui/material/styles'
-import type { JSXElementConstructor, ReactElement } from 'react'
 import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import type { MovieCardSelectedProps, MovieType } from '../MovieCardSelected'
 import noMoviesImageSrc from '../../assets/no_movies.png'
-import MovieCardSelected from '../MovieCardSelected'
+import { MovieCardSelected } from '../MovieCardSelected'
 import SelectedMoviesForm from '../SelectedMoviesForm'
 
 type MoviesType = {
-  length: string
-  map: string | number | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>>
-  movies: string
+  movies: MovieCardSelectedProps
+  map: MovieCardSelectedProps[]
   id: string
+  movie: MovieType
 }
 
 export type SelectedMoviesSectionProps = {
@@ -46,7 +46,7 @@ const NoMovies = styled(Box)(() => ({
 }))
 
 const SelectedMoviesSection = (props: SelectedMoviesSectionProps) => {
-  const { selectedMovies, deleteMovie } = props
+  const { selectedMovies = [], deleteMovie } = props
   if (!selectedMovies.length) {
     return (
       <SelectedMovies>

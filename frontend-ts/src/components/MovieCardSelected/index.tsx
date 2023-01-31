@@ -11,12 +11,12 @@ type Genres = {
   name: string
 }
 
-type MovieType = {
+export type MovieType = {
   title?: string
   image?: string
   releaseDate?: string
   runtime?: string
-  genres: Genres[]
+  genres?: Genres[]
 }
 
 export type MovieCardSelectedProps = {
