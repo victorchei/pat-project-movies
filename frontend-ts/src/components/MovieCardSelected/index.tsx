@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography'
 import MenuItem from '@mui/material/MenuItem'
 import CardMenu from '../CardMenu'
 
-type Genres = {
+export type Genres = {
   name: string
 }
 
@@ -16,7 +16,7 @@ type MovieType = {
   image?: string
   releaseDate?: string
   runtime?: string
-  genres: Genres[]
+  genres?: Genres[]
 }
 
 export type MovieCardSelectedProps = {
