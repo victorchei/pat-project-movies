@@ -11,21 +11,22 @@ type Genres = {
   name: string
 }
 
-export type MovieType = {
+type MovieType = {
   title?: string
   image?: string
   releaseDate?: string
   runtime?: string
-  genres?: Genres[]
+  genres: Genres[]
+  id: string
 }
 
 export type MovieCardSelectedProps = {
   movie: MovieType
-  display: 'flex'
+  display?: 'flex' | 'block'
   /** what the type of minheight is
    * @default 164
    */
-  minHeight: number
+  minHeight?: number
   onCardDelete: (movie: MovieType) => void
 }
 

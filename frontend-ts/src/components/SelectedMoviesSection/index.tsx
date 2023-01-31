@@ -3,21 +3,16 @@ import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import type { MovieCardSelectedProps, MovieType } from '../MovieCardSelected'
+import type { MovieCardSelectedProps } from '../MovieCardSelected'
 import noMoviesImageSrc from '../../assets/no_movies.png'
 import { MovieCardSelected } from '../MovieCardSelected'
 import SelectedMoviesForm from '../SelectedMoviesForm'
 
-type MoviesType = {
-  movies: MovieCardSelectedProps
-  map: MovieCardSelectedProps[]
-  id: string
-  movie: MovieType
-}
+type MovieType = MovieCardSelectedProps['movie']
 
 export type SelectedMoviesSectionProps = {
-  selectedMovies: MoviesType[]
-  deleteMovie: (selectedMovies: MoviesType) => void
+  selectedMovies: MovieType[]
+  deleteMovie: (selectedMovie: MovieType) => void
 }
 
 const SelectedMovies = styled(Paper)(({ theme }) => ({
@@ -72,7 +67,7 @@ const SelectedMoviesSection = (props: SelectedMoviesSectionProps) => {
     <SelectedMovies>
       <MoviesList spacing={2}>
         {selectedMovies.map((movie) => (
-          <MovieCardSelected key={movie.id} movie={movie} onCardDelete={deleteMovie} />
+          <MovieCardSelected key={movie?.id} movie={movie} onCardDelete={deleteMovie} />
         ))}
       </MoviesList>
       <Box pt={2}>
