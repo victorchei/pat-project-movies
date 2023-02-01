@@ -17,15 +17,16 @@ type MovieType = {
   releaseDate?: string
   runtime?: string
   genres: Genres[]
+  id: string
 }
 
 export type MovieCardSelectedProps = {
   movie: MovieType
-  display: 'flex'
+  display?: 'flex' | 'block'
   /** what the type of minheight is
    * @default 164
    */
-  minHeight: number
+  minHeight?: number
   onCardDelete: (movie: MovieType) => void
 }
 
