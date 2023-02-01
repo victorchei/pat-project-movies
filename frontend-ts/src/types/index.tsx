@@ -5,12 +5,19 @@ export type CardMenuProps = {
   children: ReactNode
 }
 
-/** MovieCard component */
-export type MovieType = {
+type Genres = {
+  name: string
+}
+
+type MovieType = {
   title?: string
   image?: string
   releaseDate?: string
+  runtime?: string
+  genres: Genres[]
+  id: string
 }
+
 export type MovieCardProps = {
   /** what  the max-width is in number.
    * @default 250
@@ -26,28 +33,14 @@ export type MovieCardProps = {
   backgroundColor?: string
 }
 
-/** MovieCardSelected component */
-type Genres = {
-  name: string
-}
-
-type MovieSelectedType = {
-  title?: string
-  image?: string
-  releaseDate?: string
-  runtime?: string
-  genres: Genres[]
-  id: string
-}
-
 export type MovieCardSelectedProps = {
-  movie: MovieSelectedType
+  movie: MovieType
   display?: 'flex' | 'block'
   /** what the type of minheight is
    * @default 164
    */
   minHeight?: number
-  onCardDelete: (movie: MovieSelectedType) => void
+  onCardDelete: (movie: MovieType) => void
 }
 
 /** Navigation component */
