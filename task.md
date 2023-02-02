@@ -7,7 +7,7 @@
 *  create 1 story for each component > can be 1 PR for all
 
 # 5)  day 5
-* read article about articles (ask Vitia about link)
+* read article about imports/exports (ask Vitia about link)
 * difference between export const, export default, different ways of imports, e.g 
 
 *  export default reactjcshbcvc_cc >>>> import React from 'react' 
@@ -15,5 +15,5 @@
 * import * as React from 'react'
 * , 
 
-* in src create folder types > outside crete file index.ts and move all types from components to this file > after check and add imports 
+* in src create folder types > outside create file index.ts and move all types from components to this file > after check and add imports 
 
