@@ -3,10 +3,17 @@ import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import type { SelectedMoviesSectionProps } from '../../types'
+import type { MovieCardSelectedProps } from '../MovieCardSelected'
 import noMoviesImageSrc from '../../assets/no_movies.png'
 import { MovieCardSelected } from '../MovieCardSelected'
 import SelectedMoviesForm from '../SelectedMoviesForm'
+
+type MovieType = MovieCardSelectedProps['movie']
+
+export type SelectedMoviesSectionProps = {
+  selectedMovies: MovieType[]
+  deleteMovie: (selectedMovie: MovieType) => void
+}
 
 const SelectedMovies = styled(Paper)(({ theme }) => ({
   backgroundColor: '#fff',

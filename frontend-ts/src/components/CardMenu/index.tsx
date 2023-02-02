@@ -1,9 +1,12 @@
-import type { SyntheticEvent } from 'react'
+import type { ReactNode, SyntheticEvent } from 'react'
 import React from 'react'
 import Menu from '@mui/material/Menu'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import IconButton from '@mui/material/IconButton'
-import type { CardMenuProps } from '../../types'
+
+export type CardMenuProps = {
+  children: ReactNode
+}
 
 const CardMenu = (props: CardMenuProps) => {
   const { children } = props
