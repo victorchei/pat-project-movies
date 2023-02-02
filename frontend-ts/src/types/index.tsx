@@ -56,9 +56,9 @@ export type NavigationProps = {
 }
 
 /** SelectedMoviesSection component */
-type MovieSelectedType2 = MovieCardSelectedProps['movie']
+type MovieSelectedType = MovieCardSelectedProps['movie']
 
 export type SelectedMoviesSectionProps = {
-  selectedMovies: MovieSelectedType2[]
+  selectedMovies: MovieSelectedType[]
   deleteMovie: (selectedMovie: MovieType) => void
 }
