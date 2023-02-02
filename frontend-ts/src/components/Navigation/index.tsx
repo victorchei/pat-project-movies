@@ -17,17 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu'
 import SettingsIcon from '@mui/icons-material/Settings'
 import { Link as RouterLink } from 'react-router-dom'
-
-export type NavigationProps = {
-  /** the default number
-   * @default 1
-   */
-  flexGrow: number
-  /** width number
-   * @default 250
-   */
-  width: number
-}
+import type { NavigationProps } from '../../types'
 
 const Navigation = (props: NavigationProps) => {
   const { flexGrow = 1, width = 250 } = props
