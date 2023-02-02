@@ -6,7 +6,29 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import MenuItem from '@mui/material/MenuItem'
 import CardMenu from '../CardMenu'
-import type { MovieCardSelectedProps } from '../../types'
+
+type Genres = {
+  name: string
+}
+
+type MovieType = {
+  title?: string
+  image?: string
+  releaseDate?: string
+  runtime?: string
+  genres: Genres[]
+  id: string
+}
+
+export type MovieCardSelectedProps = {
+  movie: MovieType
+  display?: 'flex' | 'block'
+  /** what the type of minheight is
+   * @default 164
+   */
+  minHeight?: number
+  onCardDelete: (movie: MovieType) => void
+}
 
 export const MovieCardSelected = (props: MovieCardSelectedProps) => {
   const { movie, display = 'flex', minHeight = 164, onCardDelete } = props

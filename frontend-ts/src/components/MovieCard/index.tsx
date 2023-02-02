@@ -9,7 +9,27 @@ import MenuItem from '@mui/material/MenuItem'
 import { styled } from '@mui/material/styles'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
 import CardMenu from '../CardMenu'
-import type { MovieCardProps } from '../../types'
+
+type MovieType = {
+  title?: string
+  image?: string
+  releaseDate?: string
+}
+
+export type MovieCardProps = {
+  /** what  the max-width is in number.
+   * @default 250
+   */
+  maxWidth: number
+  /** what is the position in string.
+   * @default relative
+   */
+  position?: 'absolute' | 'relative'
+  movie: MovieType
+  onCardSelect: (movie: MovieType) => void
+  /** possibility to choose a background color */
+  backgroundColor?: string
+}
 
 const CardInfo = styled(CardContent)(({ theme }: { theme?: Theme }) => ({
   '&:last-child': {
