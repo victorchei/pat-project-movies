@@ -42,7 +42,7 @@
 watch video `https://www.youtube.com/watch?v=ND-XaEQ4VSk&list=PLx9b8ngesbGE6j0sfH2XSbKh2Cx94DSlU`
 
 
-# 4) Create stories
+# 4) Create a stories
 *  create other components > 1PR for each component
 
 *  create 1 story for each component > can be 1 PR for all

@@ -33,9 +33,3 @@
 `yarn add react-router-dom` - install react-router-dom
 
 
-# github
-
-`git branch -d feature/movie-card` - delete local branch
-`git push origin -d featue/MovieCardSelected` - delete remote branch
-`git branch -a` - check all remote branches
-`git branch` - check all local branches
