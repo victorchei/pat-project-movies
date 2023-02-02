@@ -8,7 +8,7 @@ export type CardMenuProps = {
   children: ReactNode
 }
 
-const CardMenu = (props: CardMenuProps) => {
+export const CardMenu = (props: CardMenuProps) => {
   const { children } = props
   const [anchorEl, setAnchorEl] = React.useState<Element | null>(null)
   const open = Boolean(anchorEl)

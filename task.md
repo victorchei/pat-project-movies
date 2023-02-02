@@ -1,7 +1,7 @@
 
 
 
-# 4) Create stories
+# 4) Create a stories
 *  create other components > 1PR for each component
 
 *  create 1 story for each component > can be 1 PR for all
