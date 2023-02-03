@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
+import { IconLabelButtons } from './components/MuiButton'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
+        <IconLabelButtons zoom={3} color={'error'} />
       </header>
     </div>
   )
